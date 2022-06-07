@@ -30,9 +30,13 @@ provider "aws" {
 In main.tf
 
 ```sh
-module "name" {
-    source = "./ec2"
+module "ec2" {
+    source = "./ec2" 
     # variables
-    
+    ec2_ami = "RHEL" or "UBUN" or "AMZL" # Choose between RHEL. UBUNTU or AMZ Linux
+    ec2_instance_type = "t2.micro" or "t2.medium" etc #Enter instance type
+    #key
+    #tags
+
 }
 ```
