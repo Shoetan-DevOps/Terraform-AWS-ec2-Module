@@ -16,12 +16,23 @@ Pre-Reqs:
 3. Run custom Installation Script
 ```
 
-## How to use
+## How to use: STEP 1
+In main.tf
+
 ```sh
-module "shoetan-ec2" {
-    #source = "./ec2"
-    #my_ami = ami_list["RHEL/UBUN/AMZL"]
-    #security_group = "var.sec-group"
-    #ec2_user_data = file("var.script-path")
+provider "aws" {
+    # Manually Change the region
+    region = "## YOUR REGION ##"
+}
+```
+
+## How to use: STEP 2
+In main.tf
+
+```sh
+module "name" {
+    source = "./ec2"
+    # variables
+    
 }
 ```
