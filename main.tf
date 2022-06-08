@@ -2,7 +2,7 @@ terraform {
     required_version = "~> 1.2"
     required_providers {
         aws = {
-            versiversion = "~> 3.0"
+            version = "~> 3.0"
             source = "hashicorp/aws"
         }
     }
@@ -31,5 +31,5 @@ output "show_IP" {
 
 output "show_test" {
     description = "test vars passed to map =>"
-    value = module.ec2.test_abbrev
+    value = module.ec2.test-abbrev
 }

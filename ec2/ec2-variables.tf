@@ -14,7 +14,7 @@ variable "ec2_ami" {
 }
 
 # maps "ec2-ami" to aws ami name for datasource
-variable "ami_name_bbrv" {
+variable "ami_name_abbrv" {
     type = map
     default = {
         "RHEL" = "RHEL_HA-8.5*"
@@ -38,5 +38,5 @@ output "ec2_instance_ip" {
 #test data source abbrev
 output "test-abbrev" {
     description = "TEST DATA SRC ABBREV ==>"
-    value = var.ami_name_bbrv[var.ec2_ami]
+    value = var.ami_name_abbrv[var.ec2_ami]
 }
