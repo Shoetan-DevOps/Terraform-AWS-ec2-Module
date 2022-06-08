@@ -4,7 +4,8 @@ data "aws_ami" "module-ami" {
 
     filter {
        name = "name"
-       values = [var.ami_name_abbrv[var.ec2_ami]]
+       #values = ["${var.ami_name_abbrv[var.ec2_ami]}"]
+       values = ["amzn2-ami-*"]
     }
 
     filter {

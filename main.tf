@@ -16,7 +16,7 @@ provider "aws" {
 module "ec2" {
     source = "./ec2"
     # variables
-    ec2_ami = "AMZL"
+    ec2_ami = "RHEL"
     ec2_instance_type = "t2.micro"
     ec2_key_file = "terraform"
 }
